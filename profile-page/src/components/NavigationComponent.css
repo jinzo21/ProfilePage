@@ -5,7 +5,9 @@ nav.navbar, .navbar-default {
   .navbar-default {
     background-image: none;
     border: none;
-    border-radius: 0;
+    border-radius: 0; 
+    box-shadow: 0 8px 6px -6px #999;
+    
   }
   
   .navbar-default .navbar-nav > li > a {
