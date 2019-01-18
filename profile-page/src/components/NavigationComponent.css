@@ -1,29 +1,29 @@
 nav.navbar, .navbar-default {
-    background-color: #2892D7 !important;
+    background-color: #FEFEFE !important;
   }
   
   .navbar-default {
     background-image: none;
     border: none;
     border-radius: 0; 
-    box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 6px 6px -6px black;
     
   }
   
   .navbar-default .navbar-nav > li > a {
-    color: white;
+    color: black;
   }
   
   .navbar-default .navbar-brand {
-    color: white;
+    color: black;
   }
   
   .navbar-default .navbar-toggle {
-    border-color: white;
+    border-color: red;
   }
   
   .navbar-default .navbar-toggle .icon-bar {
-    background-color: white;
+    background-color: red;
   }
   
   .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
@@ -31,11 +31,11 @@ nav.navbar, .navbar-default {
   }
   
   .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
-    color: white;
+    color:black;
     background-color: transparent;
   }
   
   .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
-    color: white;
+    color: red;
     background-color: transparent;
   }

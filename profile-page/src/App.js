@@ -6,6 +6,7 @@ import ContactComponent from "./components/ContactComponent";
 import NavigationComponent from "./components/NavigationComponent";
 import ResumeComponent from "./components/ResumeComponent";
 import ProjectsComponent from "./components/ProjectsComponent";
+import FooterComponent from './components/FooterComponent';
 
 
 class App extends Component {
@@ -19,7 +20,7 @@ class App extends Component {
             <Route path="/contact" component={ContactComponent} />
             <Route path="/resume" component={ResumeComponent} />
             <Route path="/projects" component={ProjectsComponent} />
-
+            <FooterComponent/>
           </div>       
         </BrowserRouter>
       

@@ -7,9 +7,6 @@ const NavigationComponent = () => {
   return (
     <Navbar>
       <Navbar.Header>
-        <Navbar.Brand>
-          <Link to="/">HOME</Link>
-        </Navbar.Brand>
         <Navbar.Toggle />
       </Navbar.Header>
       <Navbar.Collapse>

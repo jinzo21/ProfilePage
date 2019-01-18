@@ -1,25 +1,59 @@
 import React, { Component } from 'react';
-import { Image, Grid, Col } from 'react-bootstrap';
+import { Image, Thumbnail, Grid, Col, Row, Button, Overlay, Tooltip } from 'react-bootstrap';
 import './ProjectsComponent.css';
 
 
 class ProjectsComponent extends Component {
   render() {
     return (
-        <div>
-          <Image src="mediaFiles/astronaut2.jpg" className="header-image" responsive/>
-          <Grid>
-            <Col xs={12} sm={8} smOffset={2}>
-              <Image src="mediaFiles/astronaut3.jpg" className="about-profile-pic" responsive />
-              <h3>Frank The Tank</h3>
-              <p>That's a crooked tree. We'll send him to Washington. These little son of a guns hide in your brush and you just have to push them out. These trees are so much fun. I get started on them and I have a hard time stopping. How to paint. That's easy. What to paint. That's much harder. Be brave. The man who does the best job is the one who is happy at his job.</p>
-              <p>Anyone can paint. You can do anything here. So don't worry about it. Life is too short to be alone, too precious. Share it with a friend. Every highlight needs it's own personal shadow.</p>
-              <p>That's what makes life fun. That you can make these decisions. That you can create the world that you want. Of course he's a happy little stone, cause we don't have any other kind. It's so important to do something every day that will make you happy.</p>
-              <p>You better get your coat out, this is going to be a cold painting. That's the way I look when I get home late; black and blue. That's crazy. We're trying to teach you a technique here and how to use it.</p>
+      <div>
+        <Grid>
+          <Row>
+          <Col xs={12} md={4}>
+              <h3 className="text">POKEDEX</h3>
+              <a href="https://github.com/jinzo21/PokedexWebApiReact">
+                <Image src="mediaFiles/robot3.jpg" className="robot-image" responsive/>
+              </a>
             </Col>
-          </Grid>
-        </div>
-      )
+            <Col xs={12} md={4}>
+              <h3 className="text">PROFILE</h3>
+              <a href="https://github.com/jinzo21/ProfilePage">
+                <Image src="mediaFiles/robot3.jpg" className="robot-image" responsive/>
+              </a>
+            </Col>
+            <Col xs={12} md={4}>
+              <h3 className="text">LAUSD SCRAPER</h3>
+              <a href="https://github.com/jinzo21/CSharp-GradeBookApplication">
+                <Image src="mediaFiles/robot3.jpg" className="robot-image" responsive/>
+              </a>
+            </Col>
+          </Row>
+          <br/>
+          <br/>
+          <br/>
+          <Row>
+          <Col xs={12} md={4}>
+              <h3 className="text">MY COUNSELOR</h3>
+              <a href="https://github.com/jinzo21/MyCounselor">
+                <Image src="mediaFiles/robot3.jpg" className="robot-image" responsive/>
+              </a>
+            </Col>
+            <Col xs={12} md={4}>
+            <h3 className="text">IMBD SPARK</h3>
+              <a href="https://github.com/">
+                <Image src="mediaFiles/robot3.jpg" className="robot-image" responsive/>
+              </a>
+            </Col>
+            <Col xs={12} md={4}>
+              <h3 className="text">GITHUB</h3>
+              <a href="https://github.com/">
+                <Image src="mediaFiles/robot3.jpg" className="robot-image" responsive/>
+              </a>
+            </Col>
+          </Row>
+        </Grid>
+      </div>
+    )
   }
 }
 
