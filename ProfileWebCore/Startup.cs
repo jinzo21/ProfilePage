@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using ProfileWebCore.Data;
 using ProfileWebCore.Models;
 using ProfileWebCore.Services;
@@ -32,10 +25,15 @@ namespace ProfileWebCore
 			// Allows for changes in versions
 			services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
+			// We add our config file as a singleton
+			services.AddSingleton(Configuration);
+
 			// Inject our Pokedex Context
-			services.AddDbContext<PokedexContext>(o => o.UseSqlServer(Configuration.GetConnectionString("localDb")));
-			
-			// Register our Repository: transient (created each time requested), scope(once per request), singleton(created first time)
+			services.AddDbContext<ProfileContext>(o => o.UseSqlServer(Configuration.GetConnectionString("localDb")));
+
+			// Register our Interfaces: transient (created each time requested), scope(once per request), singleton(created first time)
+			services.AddScoped<IConfigurationRepository, ConfigurationRepository>();
+			services.AddScoped<IMailerService, MailerService>();
 			services.AddScoped<IPokedexRepository, PokedexRespority>();
 		}
 
@@ -56,7 +54,10 @@ namespace ProfileWebCore
 			AutoMapper.Mapper.Initialize(cfg =>
 			{
 				cfg.CreateMap<PokemonEntity, PokemonModel>();
-				cfg.CreateMap<PokemonInsertModel, PokemonEntity>();
+				cfg.CreateMap<PokemonInsert, PokemonEntity>();
+				cfg.CreateMap<ConfigurationEntity, ConfigurationModel>();
+				cfg.CreateMap<ConfigurationInsert, ConfigurationEntity>();
+
 			});
 
 			// Handles bouncing http request to the hsts

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProfileWebCore.Models
 {
-	public class PokemonInsertModel
+	public class PokemonInsert
 	{
 		[Required]
 		[MaxLength(32)]

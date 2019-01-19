@@ -4,6 +4,6 @@ namespace Scraper
 {
 	public interface IRepository
 	{
-		void InsertPokemon(PokemonInsertModel pokemon);
+		void InsertPokemon(PokemonInsert pokemon);
 	}
 }

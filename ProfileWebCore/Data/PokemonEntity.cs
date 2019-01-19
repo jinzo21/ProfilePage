@@ -60,5 +60,11 @@ namespace ProfileWebCore.Data
 		[Required]
 		[MaxLength(64)]
 		public string StatTotal { get; set; }
+		[Required]
+		[Column(TypeName = "DATETIME2(7) DEFAULT (GETUTCDATE())")]
+		public DateTime DateCreated { get; set; }
+		[Required]
+		[Column(TypeName = "DATETIME2(7) DEFAULT (GETUTCDATE())")]
+		public DateTime DateUpdated { get; set; }
 	}
 }

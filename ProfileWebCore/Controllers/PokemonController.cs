@@ -87,7 +87,7 @@ namespace ProfileWebCore.Controllers
 		// POST: api/Pokemon
 
 		[HttpPost("pokemon")]
-        public IActionResult InsertPokemon([FromBody] PokemonInsertModel pokemonModel)
+        public IActionResult InsertPokemon([FromBody] PokemonInsert pokemonModel)
         {
 			if (!ModelState.IsValid)
 			{

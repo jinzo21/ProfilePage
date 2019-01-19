@@ -8,26 +8,26 @@ namespace ProfileWebCore.Services
 {
 	public class PokedexRespority : IPokedexRepository
 	{
-		private readonly PokedexContext PokedexContext;
+		private readonly ProfileContext _profileContext;
 
-		public PokedexRespority(PokedexContext pokemonContext)
+		public PokedexRespority(ProfileContext pokemonContext)
 		{
-			PokedexContext = pokemonContext;
+			_profileContext = pokemonContext;
 		}
 
 		public List<PokemonEntity> GetPokemon()
 		{
-			return PokedexContext.Pokemon.ToList();
+			return _profileContext.Pokemon.ToList();
 		}
 
 		public PokemonEntity GetPokemonByName(string pokemonName)
 		{
-			return PokedexContext.Pokemon.Where(p => p.PokemonName == pokemonName).FirstOrDefault();
+			return _profileContext.Pokemon.Where(p => p.PokemonName == pokemonName).FirstOrDefault();
 		}
 
 		public void InsertPokemon(PokemonEntity pokemon)
 		{
-			PokedexContext.Add(pokemon);
+			_profileContext.Add(pokemon);
 		}
 
 		/// <summary>
@@ -36,7 +36,7 @@ namespace ProfileWebCore.Services
 		/// <returns>Bool</returns>
 		public bool Save()
 		{
-			return (PokedexContext.SaveChanges() >= 0);
+			return (_profileContext.SaveChanges() >= 0);
 		}
 	}
 

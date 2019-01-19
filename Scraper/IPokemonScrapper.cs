@@ -5,6 +5,6 @@ namespace Scraper
 {
 	public interface IPokemonScrapper
 	{
-		List<PokemonInsertModel> Scrape();
+		List<PokemonInsert> Scrape();
 	}
 }

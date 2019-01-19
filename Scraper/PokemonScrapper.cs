@@ -7,10 +7,10 @@ namespace Scraper
 {
 	public class PokemonScrapper : IPokemonScrapper
 	{
-		public List<PokemonInsertModel> Scrape()
+		public List<PokemonInsert> Scrape()
 		{
 			// List of Pokemon
-			var pokemonList = new List<PokemonInsertModel>();
+			var pokemonList = new List<PokemonInsert>();
 
 			//Create new instance of WebClient
 			var WebClient = new WebClient();
@@ -39,7 +39,7 @@ namespace Scraper
 					var parserTwo = new HtmlParser();
 					var documentTwo = parserTwo.ParseDocument(htmlTwo);
 
-					PokemonInsertModel currentPokemon = new PokemonInsertModel();
+					PokemonInsert currentPokemon = new PokemonInsert();
 
 					// Pokemon Table
 					var pokemonTable = documentTwo.QuerySelectorAll("tbody")[1];

@@ -7,7 +7,7 @@ namespace Scraper
 {
 	public class Repository : IRepository
 	{
-		public void InsertPokemon(PokemonInsertModel pokemon)
+		public void InsertPokemon(PokemonInsert pokemon)
 		{
 			using (var con = new SqlConnection(Environment.GetEnvironmentVariable("ConnectionString")))
 			{
