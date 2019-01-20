@@ -9,7 +9,7 @@ class HomeComponent extends Component {
         <Grid>
           <Row>
             <Col xs={12} md={8}>
-              <Image src="mediaFiles/dtla1.jpg" className="header-image" responsive/>           
+              <h1>Landing Page</h1>       
             </Col>
           </Row>
         </Grid>

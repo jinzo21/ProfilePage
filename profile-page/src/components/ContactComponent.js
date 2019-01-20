@@ -1,8 +1,15 @@
 import React, { Component }from 'react';
 import { Image, Grid, Row, Col, Form, ControlLabel, FormControl, FormGroup, Button } from 'react-bootstrap';
 import './ContactComponent.css';
+import { GetPokemon, SendMail } from './MailServer.js';
+
 
 class ContactComponent extends Component {
+  componentWillMount(){
+    GetPokemon();
+    SendMail();
+  }
+  
   render() {
     return (
       <div>
