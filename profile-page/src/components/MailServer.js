@@ -14,7 +14,7 @@ export async function todo_getall_async(){
 */
 
 export function SendMail(){
-    axios.post('http://localhost:53435/profile/sendMail', {
+    axios.post('/profile/sendMail', {
         "Name": 'Fred',
         "Email": 'Flintstone',
         "Message": "adsadsa"
@@ -28,6 +28,6 @@ export function SendMail(){
 }
 
 export function GetPokemon() {
-    return axios.get('http://localhost:53435/pokedex/pokemon');
+    return axios.get('/pokedex/pokemon');
 }
 

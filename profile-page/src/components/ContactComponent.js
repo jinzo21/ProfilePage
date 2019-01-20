@@ -5,24 +5,42 @@ import { GetPokemon, SendMail } from './MailServer.js';
 
 
 class ContactComponent extends Component {
-  componentWillMount(){
-    GetPokemon();
-    SendMail();
-  }
+  
+  state = {
+    name: "",
+    email: "",
+    message: ""
+  };
   
   render() {
+
+    console.log(this.state.name);
+
     return (
       <div>
         <Grid>
           <Row>
+            <br />
             <Col xs={12} sm={8} className="main-section">
               <Form horizontal>
+                <FormGroup controlId="formHorizontalEmail">
+                    <Col componentClass={ControlLabel} sm={2}>
+                      NAME
+                    </Col>
+                    <Col sm={10}>
+                      <FormControl 
+                        type="textarea" 
+                        onChange={e => this.setState({ name: e.target.value })} />
+                    </Col>
+                  </FormGroup>
                 <FormGroup controlId="formHorizontalEmail">
                   <Col componentClass={ControlLabel} sm={2}>
                     EMAIL
                   </Col>
                   <Col sm={10}>
-                    <FormControl type="email" placeholder="Email" />
+                    <FormControl 
+                      type="email" 
+                      onChange={e => this.setState({ email: e.target.value })} />
                   </Col>
                 </FormGroup>
 
@@ -31,7 +49,10 @@ class ContactComponent extends Component {
                     MESSAGE
                   </Col>
                   <Col sm={10}>
-                    <FormControl type="textarea" placeholder="........." />
+                    <FormControl 
+                      type="textarea" 
+                      style={{ height: 150 }}
+                      onChange={e => this.setState({ message: e.target.value })} />
                   </Col>
                 </FormGroup>
 

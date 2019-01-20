@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
+import { Navbar } from 'react-bootstrap';
 import './FooterComponent.css';
 
 class FooterComponent extends Component {
   render() {
     return (
-          <div>
-          </div>
-    )
+      <Navbar.FooterComponent>
+ 
+       
+ 
+     </Navbar.FooterComponent>
+    );
   }
 }
 

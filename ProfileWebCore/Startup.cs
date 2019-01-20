@@ -23,6 +23,7 @@ namespace ProfileWebCore
 		public void ConfigureServices(IServiceCollection services)
 		{
 			// Allows for changes in versions
+			services.AddCors();
 			services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
 			// We add our config file as a singleton
@@ -49,6 +50,13 @@ namespace ProfileWebCore
 				// On by default: allows the ability to force the browser to only exists over https
 				app.UseHsts();
 			}
+
+			// Verify these Cors settings
+			app.UseCors(builder => builder
+				.WithOrigins("http://localhost:3000")
+				.AllowAnyMethod()
+				.AllowAnyHeader()
+				.AllowCredentials());
 
 			// Set our Automapper for Entites to Dtos
 			AutoMapper.Mapper.Initialize(cfg =>

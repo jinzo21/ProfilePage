@@ -6,3 +6,7 @@
 .sidebar-section img {
   width: 100%;
 }
+
+.emailMessage {
+  height: 300px;
+}
