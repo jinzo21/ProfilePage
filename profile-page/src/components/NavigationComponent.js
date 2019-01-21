@@ -11,16 +11,19 @@ const NavigationComponent = () => {
       </Navbar.Header>
       <Navbar.Collapse>
         <Nav pullRight>
-          <NavItem eventKey={1} componentClass={Link} href="/" to="/about">
+         <NavItem eventKey={1} componentClass={Link} href="/" to="/">
+            HOME
+          </NavItem>
+          <NavItem eventKey={2} componentClass={Link} href="/" to="/about">
             ABOUT
           </NavItem>
-          <NavItem eventKey={2} componentClass={Link} href="/resume" to="/resume">
+          <NavItem eventKey={3} componentClass={Link} href="/resume" to="/resume">
             RESUME
           </NavItem>
-          <NavItem eventKey={3} componentClass={Link} href="/projects" to="/projects">
+          <NavItem eventKey={4} componentClass={Link} href="/projects" to="/projects">
             PROJECTS
           </NavItem>
-          <NavItem eventKey={4} componentClass={Link} href="/contact" to="/contact">
+          <NavItem eventKey={5} componentClass={Link} href="/contact" to="/contact">
             CONTACT
           </NavItem>
         </Nav>
