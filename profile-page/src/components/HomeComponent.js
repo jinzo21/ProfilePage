@@ -9,16 +9,11 @@ class HomeComponent extends Component {
     return (
       <Grid fluid={true}>
         <Row>
+          
           <Col Col xs={12} sm={12} md={12} lg={12}>
-              <div className="section" style={{ textAlign: "center" }}>
-                <div className="color-overlay" ></div>
-                <div className="video-container" >
-                  <video src="mediaFiles/JAPANPromo.mov" autoplay="true" muted="true" loop="true" ></video>
-                </div>
-                <div className="home-text">
-                  <h1>IMAGINE. CREATE. BUILD.</h1>
-                </div>
-              </div>
+          
+            <video src="mediaFiles/geckoAnimation.mp4" autoplay="true" muted="true" loop="true" responsive></video>
+          
           </Col>
         </Row>
         <Row >
