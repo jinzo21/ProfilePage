@@ -1,5 +1,5 @@
 import React, { Component }from 'react';
-import { Image, Grid, Row, Col, Form, ControlLabel, FormControl, FormGroup, Button } from 'react-bootstrap';
+import { Image, Grid, Row, Col, Form, ControlLabel, FormControl, FormGroup, Button, ListGroup, ListGroupItem } from 'react-bootstrap';
 import './ContactComponent.css';
 import { GetPokemon, SendMail } from './MailServer.js';
 
@@ -20,8 +20,13 @@ class ContactComponent extends Component {
       <div>
         <Grid fluid={true}>
           <Row>
+            <Col xs={12} sm={12} md={12} lg={12}responsive>
+                <Image src="mediaFiles/brdige2.png" className="contact-image" />              
+            </Col>
+          </Row>
+          <Row>
             <br />
-            <Col xs={12} sm={8} className="main-section">
+            <Col xs={12} sm={6}>
               <Form horizontal>
                 <FormGroup controlId="formHorizontalEmail">
                     <Col componentClass={ControlLabel} sm={2}>
@@ -63,9 +68,19 @@ class ContactComponent extends Component {
                 </FormGroup>
               </Form>
             </Col>
-            <Col xs={12} sm={4} className="sidebar-section">
-              <Image src="mediaFiles/astronaut1.jpg" responsive/>
-              <h5>Thank you for reaching out. I'll be sure to respond within a day.</h5>
+            <Col xs={12} sm={6}>
+            <ListGroup>
+              <ListGroupItem header="GENERAL INFORMATION">
+                albertojurbina@gmail.com <br/> 
+                323-439-7336
+              </ListGroupItem>
+              <br/>
+              <ListGroupItem header="CURRENT POSITION">
+                Software Design Engineer<br/>
+                Azure Optimization Automation<br/>
+                Redmond, WA - Microsoft<br/> 
+              </ListGroupItem>
+            </ListGroup>
             </Col>
           </Row>
         </Grid>
