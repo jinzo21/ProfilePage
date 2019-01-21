@@ -7,7 +7,7 @@ class ResumeComponent extends Component {
   render() {
     return (
         <div>
-          <Grid>
+          <Grid fluid={true}>
             <Row>
               <Col xs={12} md={12}>
                 <Image src="mediaFiles/cat2.jpg" className="cat-image" responsive/>           

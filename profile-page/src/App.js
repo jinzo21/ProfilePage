@@ -9,9 +9,20 @@ import ProjectsComponent from "./components/ProjectsComponent";
 import FooterComponent from './components/FooterComponent';
 
 
+
 class App extends Component {
+  state = {
+    landingPage: true
+  }  
+
   render() {
-    return (
+    // if (this.state.landingPage == true) {
+    //   return (
+    //     <LandingPageComponent />
+    //   );
+    // }
+    // else {
+      return (
         <BrowserRouter>
           <div>
             <NavigationComponent />
@@ -25,6 +36,8 @@ class App extends Component {
         </BrowserRouter>
       
     );
+    //}
+   
   }
 }
 

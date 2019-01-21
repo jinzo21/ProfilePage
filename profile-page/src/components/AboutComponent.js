@@ -6,7 +6,7 @@ class AboutComponent extends Component {
   render() {
     return (
       <div>
-        <Grid>
+        <Grid fluid={true}>
           <Row>
             <Col Col xs={12} sm={12} md={12} lg={12}>
               <Image src="mediaFiles/cover.jpg" responsive/>    

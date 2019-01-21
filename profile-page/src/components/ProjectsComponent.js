@@ -7,7 +7,7 @@ class ProjectsComponent extends Component {
   render() {
     return (
       <div>
-        <Grid>
+        <Grid fluid={true}>
           <Row>
           <Col xs={12} md={4}>
               <h3 className="text">POKEDEX</h3>

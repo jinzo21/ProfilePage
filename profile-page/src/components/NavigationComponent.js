@@ -5,7 +5,7 @@ import './NavigationComponent.css';
 
 const NavigationComponent = () => {
   return (
-    <Navbar>
+    <Navbar staticTop>
       <Navbar.Header>
         <Navbar.Toggle />
       </Navbar.Header>

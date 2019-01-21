@@ -18,7 +18,7 @@ class ContactComponent extends Component {
 
     return (
       <div>
-        <Grid>
+        <Grid fluid={true}>
           <Row>
             <br />
             <Col xs={12} sm={8} className="main-section">
