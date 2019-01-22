@@ -12,21 +12,21 @@ class ProjectsComponent extends Component {
             <Carousel.Item className="carousel-img" >
               <img src="mediaFiles/wire.jpg" />
               <Carousel.Caption>
-                <h3>GitHub</h3>
+                <a href="https://github.com/jinzo21"><h3>GitHub</h3></a>
                 <h4>Profile page holding code samples.</h4>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item className="carousel-img">
               <img src="mediaFiles/pokemon.jpg" />
               <Carousel.Caption>
-                <h3>POKEDEX</h3>
+                <a href="https://github.com/jinzo21/PokedexWebApiReact"><h3>POKEDEX</h3></a>
                 <h4>React based Pokedex: holds information on the first 150 Pokemon.</h4>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item className="carousel-img">
               <img src="mediaFiles/books.jpg" />
               <Carousel.Caption>
-                <h3>LAUSD SCRAPER</h3>
+                <a href="https://github.com/jinzo21/MyCounselor"><h3>LAUSD SCRAPER</h3></a>
                 <h4>Scraped the Los Angeles School Unified District's class schedule.</h4>
               </Carousel.Caption>
             </Carousel.Item>

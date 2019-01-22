@@ -22,7 +22,7 @@ class ContactComponent extends Component {
         <Grid fluid={true}>
           <Row>
             <Col xs={12} sm={12} md={12} lg={12}responsive>
-                <Image src="mediaFiles/brdige2.png" className="contact-image" />              
+                <Image src="mediaFiles/brdige2.jpg" className="contact-image" />              
             </Col>
           </Row>
           <Row>
