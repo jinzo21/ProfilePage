@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Scraper": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ConnectionString": "Server=.;Database=ProfileDb;Trusted_Connection=True;"
+      }
+    }
+  }
+}
