@@ -1,11 +1,4 @@
-.robot-image {
-  padding: 10px;
-  box-shadow: 5px 10px 8px #888888;
-  position: relative;
-}
-
-
-.text {
-  text-align: center;
-  color: black;
+.carousel-img {
+  width: 100%;
+  height: 73vh;
 }

@@ -9,6 +9,7 @@ class ContactComponent extends Component {
   state = {
     name: "",
     email: "",
+    phone: "",
     message: ""
   };
   
@@ -29,15 +30,15 @@ class ContactComponent extends Component {
             <Col xs={12} sm={6}>
               <Form horizontal>
                 <FormGroup controlId="formHorizontalEmail">
-                    <Col componentClass={ControlLabel} sm={2}>
-                      NAME
-                    </Col>
-                    <Col sm={10}>
-                      <FormControl 
-                        type="textarea" 
-                        onChange={e => this.setState({ name: e.target.value })} />
-                    </Col>
-                  </FormGroup>
+                  <Col componentClass={ControlLabel} sm={2}>
+                    NAME
+                  </Col>
+                  <Col sm={10}>
+                    <FormControl 
+                      type="textarea" 
+                      onChange={e => this.setState({ name: e.target.value })} />
+                  </Col>
+                </FormGroup>
                 <FormGroup controlId="formHorizontalEmail">
                   <Col componentClass={ControlLabel} sm={2}>
                     EMAIL
@@ -48,7 +49,16 @@ class ContactComponent extends Component {
                       onChange={e => this.setState({ email: e.target.value })} />
                   </Col>
                 </FormGroup>
-
+                <FormGroup controlId="formHorizontalEmail">
+                  <Col componentClass={ControlLabel} sm={2}>
+                    PHONE
+                  </Col>
+                  <Col sm={10}>
+                    <FormControl 
+                      type="textarea" 
+                      onChange={e => this.setState({ phone: e.target.value })} />
+                  </Col>
+                </FormGroup>
                 <FormGroup controlId="formControlsTextarea">
                   <Col componentClass={ControlLabel} sm={2}>
                     MESSAGE
@@ -70,15 +80,16 @@ class ContactComponent extends Component {
             </Col>
             <Col xs={12} sm={6}>
             <ListGroup>
-              <ListGroupItem header="GENERAL INFORMATION">
-                albertojurbina@gmail.com <br/> 
-                323-439-7336
+              <ListGroupItem>
+                <h3>CONTACT INFORMATION</h3>
+                <h4>albertojurbina@gmail.com</h4> 
               </ListGroupItem>
               <br/>
-              <ListGroupItem header="CURRENT POSITION">
-                Software Design Engineer<br/>
-                Azure Optimization Automation<br/>
-                Redmond, WA - Microsoft<br/> 
+              <ListGroupItem>
+                <h3>CURRENT POSITION</h3>
+                <h4>Software Design Engineer</h4>
+                <h4>Azure Optimization Automation</h4>
+                <h4>Redmond, WA - Microsoft</h4>
               </ListGroupItem>
             </ListGroup>
             </Col>

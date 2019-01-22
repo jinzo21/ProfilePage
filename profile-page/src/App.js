@@ -16,12 +16,6 @@ class App extends Component {
   }  
 
   render() {
-    // if (this.state.landingPage == true) {
-    //   return (
-    //     <LandingPageComponent />
-    //   );
-    // }
-    // else {
       return (
         <BrowserRouter>
           <div>
@@ -36,8 +30,6 @@ class App extends Component {
         </BrowserRouter>
       
     );
-    //}
-   
   }
 }
 

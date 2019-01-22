@@ -1,57 +1,36 @@
 import React, { Component } from 'react';
-import { Image, Thumbnail, Grid, Col, Row, Button, Overlay, Tooltip } from 'react-bootstrap';
+import { Carousel } from 'react-bootstrap';
 import './ProjectsComponent.css';
+import { Link } from 'react-router-dom';
 
 
 class ProjectsComponent extends Component {
   render() {
     return (
       <div>
-        <Grid fluid={true}>
-          <Row>
-          <Col xs={12} md={4}>
-              <h3 className="text">POKEDEX</h3>
-              <a href="https://github.com/jinzo21/PokedexWebApiReact">
-                <Image src="mediaFiles/robot3.jpg" className="robot-image" responsive/>
-              </a>
-            </Col>
-            <Col xs={12} md={4}>
-              <h3 className="text">PROFILE</h3>
-              <a href="https://github.com/jinzo21/ProfilePage">
-                <Image src="mediaFiles/robot3.jpg" className="robot-image" responsive/>
-              </a>
-            </Col>
-            <Col xs={12} md={4}>
-              <h3 className="text">LAUSD SCRAPER</h3>
-              <a href="https://github.com/jinzo21/CSharp-GradeBookApplication">
-                <Image src="mediaFiles/robot3.jpg" className="robot-image" responsive/>
-              </a>
-            </Col>
-          </Row>
-          <br/>
-          <br/>
-          <br/>
-          <Row>
-          <Col xs={12} md={4}>
-              <h3 className="text">MY COUNSELOR</h3>
-              <a href="https://github.com/jinzo21/MyCounselor">
-                <Image src="mediaFiles/robot3.jpg" className="robot-image" responsive/>
-              </a>
-            </Col>
-            <Col xs={12} md={4}>
-            <h3 className="text">IMBD SPARK</h3>
-              <a href="https://github.com/">
-                <Image src="mediaFiles/robot3.jpg" className="robot-image" responsive/>
-              </a>
-            </Col>
-            <Col xs={12} md={4}>
-              <h3 className="text">GITHUB</h3>
-              <a href="https://github.com/">
-                <Image src="mediaFiles/robot3.jpg" className="robot-image" responsive/>
-              </a>
-            </Col>
-          </Row>
-        </Grid>
+           <Carousel>
+            <Carousel.Item className="carousel-img" >
+              <img src="mediaFiles/wire.jpg" />
+              <Carousel.Caption>
+                <h3>GitHub</h3>
+                <h4>Profile page holding code samples.</h4>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item className="carousel-img">
+              <img src="mediaFiles/pokemon.jpg" />
+              <Carousel.Caption>
+                <h3>POKEDEX</h3>
+                <h4>React based Pokedex: holds information on the first 150 Pokemon.</h4>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item className="carousel-img">
+              <img src="mediaFiles/books.jpg" />
+              <Carousel.Caption>
+                <h3>LAUSD SCRAPER</h3>
+                <h4>Scraped the Los Angeles School Unified District's class schedule.</h4>
+              </Carousel.Caption>
+            </Carousel.Item>
+          </Carousel>
       </div>
     )
   }

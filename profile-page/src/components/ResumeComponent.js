@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { Image, Row, Grid, Col, Tab, Tabs, ProgressBar } from 'react-bootstrap';
+import { Image, Row, Grid, Col, Tab, Tabs } from 'react-bootstrap';
 import './ResumeComponent.css';
-
 
 class ResumeComponent extends Component {
   render() {
@@ -10,7 +9,7 @@ class ResumeComponent extends Component {
           <Grid fluid={true}>
             <Row>
               <Col xs={12} md={12}>
-                <Image src="mediaFiles/cat2.jpg" className="cat-image" responsive/>           
+                <Image src="mediaFiles/danboard.jpg" className="cat-image" responsive/>           
               </Col>
             </Row>
             <Row>
@@ -22,25 +21,31 @@ class ResumeComponent extends Component {
               </Col>
             </Row>
             <Row>
-              <Col xs={12} s={12} md={4}>
-                <div className="techSkills">
-                  <ProgressBar striped bsStyle="success" now={75} label="Azure"/>
-                  <ProgressBar striped bsStyle="info" now={70} label="C#"/>
-                  <ProgressBar striped bsStyle="warning" now={30} label="CSS"/>
-                  <ProgressBar striped bsStyle="warning" now={50} label="JavaScript"/>
-                  <ProgressBar striped bsStyle="warning" now={80} label="HTML"/>
-                  <ProgressBar striped bsStyle="info" now={70} label=".NET"/>
-                  <ProgressBar striped bsStyle="info" now={40} label=".NET CORE"/>
-                  <ProgressBar striped bsStyle="warning" now={65} label="React"/>
-                  <ProgressBar striped bsStyle="info" now={65} label="T-SQL"/>
-                  <ProgressBar striped bsStyle="info" now={80} label="Web API 2"/>
-                </div>
+              <Col xs={12} s={12} md={4} className="icons">
+                <Row>
+                <i className="devicon-javascript-plain"></i>
+                <i class="devicon-html5-plain"></i>
+                <i class="devicon-css3-plain"></i>
+                <i class="devicon-bootstrap-plain"></i>
+                </Row>
+                <Row>
+                <i class="devicon-react-original"></i>
+                <i class="devicon-csharp-plain"></i>
+                <i class="devicon-windows8-original"></i>
+                <i class="devicon-visualstudio-plain"></i>
+                </Row>
+                <Row>
+                <i class="devicon-github-plain"></i>
+                <i class="devicon-git-plain"></i>
+                <i class="devicon-chrome-plain"></i>
+                <i class="devicon-firefox-plain"></i>
+                </Row>
               </Col>
               <Col xs={12} s={12} md={8} >
                 <Tabs defaultActiveKey={1} animation={false} id="noanim-tab-example">
-                  <Tab eventKey={1} title="MICROSOFT">
+                  <Tab eventKey={1} title="MICROSOFT" className="tab-header">
                     <br/>
-                    <h4>I currently work with the Azure Optimization Automation team at Microsoft HQ in Redmond, WA. Our team primarly works on creating recommendations for various Azure services. I am currently working on optimizing our VM/DataDisk recommendation by leveraging tools with Azure such as Graph, Resource Graph, Data Warehouse, DataBricks, & Kusto.</h4>
+                    <h4 >I currently work with the Azure Optimization Automation team at Microsoft HQ in Redmond, WA. Our team primarly works on creating recommendations for various Azure services. I am working on optimizing our VM/DataDisk recommendation by leveraging tools with Azure such as Graph, Resource Graph, Data Warehouse, DataBricks, & Kusto.</h4>
                   </Tab>
                   <Tab eventKey={2} title="ALTUS">
                     <h4>I worked with the Altus Group in Irvine, CA as a software engineering building custom real-estate .NET applications. My responsibilities included creating/updating existing applications & gathering user feedback. One of my projects dealt with a client in China and another in South Africa! We primarily worked within the .NET suite: C#, SQL Server 2016, XML, Excel, & WPF.</h4>
@@ -51,8 +56,6 @@ class ResumeComponent extends Component {
                 </Tabs>         
               </Col>
             </Row>
-            <br />   
-            <br /> 
           </Grid>
         </div>
       )
